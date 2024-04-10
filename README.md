@@ -1,1 +1,2 @@
 # SBA319
+This skill based assessment tested my knowledge of MongoDB by creating 3 different data collections within the database in conjunction with Mongoose. The three collections are users, posts, comments, all with get, get id, post, put, and delete routes.
