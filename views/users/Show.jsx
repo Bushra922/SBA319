@@ -5,8 +5,8 @@ class Show extends React.Component {
         const user = this.props.user;
         return (
             <DefaultLayout title="Show an Individual User">
-                <p>The {user.name} is {user.dates}</p>
-                {user.readyToEat ? 'It is ready to read' : "NOT READY!"}
+                <p>The {user.name} is  {user.email} and {user.DOB}</p>
+                {user.readyToRead ? 'It is ready to read' : "NOT READY!"}
                 <br />
                 <a href={`/users/${user._id}/edit`}>Edit This User</a>
                 <form action={`/users/${user._id}?_method=DELETE`} method="POST">

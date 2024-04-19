@@ -5,7 +5,7 @@ const westernSignsSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    Dates: {
+    dates: {
         type: String,
         required: true
     },

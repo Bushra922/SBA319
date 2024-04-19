@@ -15,22 +15,22 @@ try {
 await chineseSigns.create([
     {
         name: 'Monkey',
-        years: '1920, 1932, 1944, 1956, 1968, 1980, 1992, 2004, 2016',
+        years: '1992',
         readyToRead : false
     },
     {
         name: 'Horse',
-        years: ' 1942, 1954, 1966, 1978, 1990, 2002, 2014, 2026',
+        years: '1990',
         readyToRead : true
     },
     {
         name: 'Rabbit',
-        years: '1951, 1963, 1975, 1987, 1999, 2011, 2023',
+        years: '1999',
         readyToRead : false
     },
     {
         name: 'Rooster',
-        years: '1945, 1957, 1969, 1981, 1993, 2005, 2017',
+        years: '1993',
         readyToRead : false
     }
 ])
@@ -86,7 +86,8 @@ res.redirect(`/chineseSigns/${req.params.id}`);
 //C-CREATE
 // I am starting with my post route so taht I can see the things in my database
 router.post('/', async(req, res) => {
-    // this will be useful when have a user input form
+    console.log(req.body)
+   /// this will be useful when have a user input form
     if (req.body.readyToRead === 'on') { // if checked, req.body.readyToEat is set to 'on' - or the checkbox is checked
         req.body.readyToRead = true;
     } else {                            // if not checked, then it was undefined

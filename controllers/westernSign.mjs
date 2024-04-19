@@ -5,10 +5,7 @@ import westernSign from '../models/westernSigns.mjs';
 import db from '../db/conn.mjs';
 
 
-
 //////////////////////////
-
-
 
 router.get("/seed", async(req, res) => {
 console.log('in seed');
@@ -87,6 +84,7 @@ res.redirect(`/westernSigns/${req.params.id}`);
 //C-CREATE
 // I am starting with my post route so taht I can see the things in my database
 router.post('/', async(req, res) => {
+    console.log(req.body)
     // this will be useful when have a user input form
     if (req.body.readyToRead === 'on') { // if checked, req.body.readyToEat is set to 'on' - or the checkbox is checked
         req.body.readyToRead = true;

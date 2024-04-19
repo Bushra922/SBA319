@@ -1,18 +1,20 @@
 import mongoose from 'mongoose';
 
-const chineseSignsSchema = new mongoose.Schema({
+const chineseSignSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: true
+        required: true,
+        minlength: 4,
+        maxlength: 55,
     },
-    Years: {
-        type: String,
+    years: {
+        type: Number,
         required: true
     },
     readyToRead: Boolean
 });
 
-const chineseSigns= mongoose.model('chineseSigns', chineseSignsSchema);
+const chineseSign= mongoose.model('chineseSigns', chineseSignSchema);
 
-export default chineseSigns
+export default chineseSign
 ;

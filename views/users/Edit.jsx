@@ -5,13 +5,14 @@ class Edit extends React.Component{
   render() {
     return (
       <DefaultLayout title="Edit Page">
-     {/* See the Layout takes in a prop called Title and we pass Edit Page to it  note: comments can't go first or last in  jsx return*/}
+      {/* See the Layout takes in a prop called Title and we pass Edit Page to it  note: comments can't go first or last in  jsx return*/}
           {/* form is not complete we will do that below*/}
-      <form action={`/users/${this.props.users._id}?_method=PUT`} method="POST">
-          Name: <input type="text" name="name" defaultValue={this.props.users.name}/><br/>
-          dates: <input type="text" name="dates"  defaultValue={this.props.users.dates}/><br/>
+      <form action={`/users/${this.props.user._id}?_method=PUT`} method="POST">
+          Name: <input type="text" name="name" defaultValue={this.props.user.name}/><br/>
+          email: <input type="email" name="email" defaultValue={this.props.user.email}/><br/>
+          DOB: <input type="number" name="DOB"  defaultValue={this.props.user.DOB}/><br/>
           Is Ready To Read:
-              { this.props.users.readyToRead? <input type="checkbox" name="readyToRead" defaultChecked />: <input type="checkbox" name="readyToRead"/> }
+              { this.props.user.readyToRead? <input type="checkbox" name="readyToRead" defaultChecked />: <input type="checkbox" name="readyToRead"/> }
           <br/>
           <input type="submit" value="Submit Changes"/>
       </form>

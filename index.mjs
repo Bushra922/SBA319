@@ -7,7 +7,7 @@ import methodOverride from 'method-override';
 import db from './db/conn.mjs';
 import chineseSignsRoutes from './controllers/chineseSign.mjs';
 import westernSignsRoutes from './controllers/westernSign.mjs';
-import usersRoutes from './controllers/user.mjs';
+import userRoutes from './controllers/user.mjs';
 
 // creating express application and other variables
 const app = express();
@@ -33,7 +33,7 @@ app.use(methodOverride('_method'));
 
 app.use("/westernSigns", westernSignsRoutes);
 app.use("/chineseSigns", chineseSignsRoutes);
-app.use("/users", usersRoutes);
+app.use("/users", userRoutes);
 
 app.get('/', (req, res) => {
     res.send(
@@ -42,9 +42,9 @@ app.get('/', (req, res) => {
     );
 });
 
-//================chineseSigns Routes==============//
+// //================chineseSigns Routes==============//
 
-//app.use("/chineseSigns", chineseSignsRoutes);
+app.use("/chineseSigns", chineseSignsRoutes);
 app.get('/', (req, res) => {
     res.send(
         `<div> this is my westernSigns and chineseSigns root route <br/><a href='/chineseSigns'>chineseSigns</a></div>`

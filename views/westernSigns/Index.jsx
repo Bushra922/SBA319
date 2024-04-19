@@ -18,7 +18,7 @@ class Index extends React.Component {
                                     {westernSigns.name}
                                 </a> {' '}
                                 is {westernSigns.dates} <br></br>
-                                {vegetable.readyToRead
+                                {westernSigns.readyToRead
                                 ? `It is ready to Read`
                             :   `It is NOT ready to Read`}
                             <br />

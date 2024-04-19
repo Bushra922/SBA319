@@ -19,7 +19,7 @@ class Index extends React.Component {
                                 <a href={`/chineseSigns/${chineseSigns._id}`}>
                                     {chineseSigns.name}
                                 </a> {' '}
-                                is {chineseSigns.color} <br></br>
+                                is {chineseSigns.years} <br></br>
                                 {chineseSigns.readyToRead
                                 ? `It is ready to read`
                             :   `It is NOT ready to read`}

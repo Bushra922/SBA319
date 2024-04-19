@@ -2,7 +2,7 @@ const React = require('react');
 const DefaultLayout = require('../layout/Default')
 class Show extends React.Component {
     render() {
-        const westernSigns = this.props.westernSigns;
+        const westernSigns = this.props.westernSign;
         return (
             <DefaultLayout title="Show an Individual WesternSigns">
                 <p>The {westernSigns.name} is {westernSigns.dates}</p>

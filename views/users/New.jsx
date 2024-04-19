@@ -7,7 +7,8 @@ class New extends React.Component {
                 {/* NOTE: action will be the route, method will be the HTTP verb */}
                 <form action='/users' method="POST">
                     Name: <input type="text" name="name" /><br />
-                    Dates: < input type="text" name="dates"/> <br />
+                    Email: <input type="email" name="email" /><br />
+                    DOB: < input type="number" name="DOB"/> <br />
                     Is Ready to Read: <input type="checkbox" name="readyToRead"/> <br />
                     <input type="submit" name="" value="Create Users"/>
                 </form>

@@ -8,7 +8,7 @@ class New extends React.Component {
                 {/* NOTE: action will be the route, method will be the HTTP verb */}
                 <form action='/chineseSigns' method="POST">
                     Name: <input type="text" name="name" /><br />
-                    Years: < input type="text" name="years"/> <br />
+                    Years: < input type="number" name="years"/> <br />
                     Is Ready to Read: <input type="checkbox" name="readyToRead"/> <br />
                     <input type="submit" name="" value="Create ChineseSigns"/>
                 </form>

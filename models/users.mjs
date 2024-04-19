@@ -1,17 +1,21 @@
 import mongoose from 'mongoose';
 
-const usersSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: true
+        required: true,
+        minlength: 2,
+        maxlength: 50,
+        trim: true // Trim whitespace from both ends of the string
     },
-    Dates: {
+    email: {
         type: String,
-        required: true
+        required: true 
     },
+    DOB: Number,
     readyToRead: Boolean
 });
 
-const users= mongoose.model('users', usersSchema);
+const User= mongoose.model('User', userSchema);
 
-export default users;
+export default User;
